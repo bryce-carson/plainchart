@@ -36,6 +36,31 @@ than the default to reduce visual bias. However, the library is incredibly
 simple, and shouldn't be relied upon for qualitative data analysis. It is only
 suitable as an amusement or for a quick view of a simple linear trend.
 
+The x dimension is not part of the plotting API, which is limited to providing
+a single series of dependent variable values. If the distance between the
+independent variable of observations is irregular there will be an unacceptable
+amount of perceptual bias introduced. Charts are best used with regularly
+sampled data and the sampling rate should be printed alongside the chart for
+clarity.
+
+See the below example for controlling perceptual bias through captioning. The
+descriptions of the charts printed before the charts themselves inform the
+reader of the sample rate at which the data was collected, ensuring that the
+reader understands that while the visual desription of the data is the same,
+the data in graphed in the two charts cannot be compared visually alone (the
+visual axis of the independent variable is not scaled).
+
+```python
+import plainchart
+
+
+print("Sample rate: 10 Hz (1/100ms)")
+print(plainchart.PlainChart([1,2,3]).render())
+
+print("Sample rate: 1 Hz (1/1000ms)")
+print(plainchart.PlainChart([1,2,3]).render())
+```
+
 """
 
 
