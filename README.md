@@ -1,7 +1,7 @@
 PlainChart
 ==========
 
-A text-based, no-dependencies, `pip`-installable, open-source charting utility in Python.
+A text-based, no-dependencies, open-source charting utility in Python.
 
 Usage:
 ```python
@@ -19,14 +19,6 @@ Usage:
 ▌ ▌ ▌▌ ▌▌▌▌▌
 ▌ ▌ ▌▌▌▌▌▌▌▌
 ▌▌▌▌▌▌▌▌▌▌▌▌
-```
-
-Installation
-------------
-
-To install PlainChart, you can use [pipenv](http://pipenv.org/) or pip:
-```bash
-$ pipenv install plainchart
 ```
 
 Features
@@ -123,7 +115,7 @@ print(chart.render(new_line='<br>'))
 $ python mean_html.py > mean.html
 ```
 
-![Mean HTML chart](https://github.com/gduverger/plainchart/blob/master/static/mean.png "Mean HTML chart")
+![Mean HTML chart](https://github.com/gduverger/bryced-carson/blob/master/static/mean.png "Mean HTML chart")
 
 Contribute
 ----------
@@ -133,4 +125,7 @@ Please feel free to open an issue to propose a new feature or point out a bug. Y
 Support
 -------
 
-PlainChart is free and under the [MIT License](LICENSE). To support its development, you can make a donation to [cash.me/$gduverger](https://cash.me/$gduverger).
+This fork of PlainChart is a downstream effort used in a single project. Please
+contribute to the upstream, unless this fork is markedly better.
+
+PlainChart is free and under the [MIT License](LICENSE).
