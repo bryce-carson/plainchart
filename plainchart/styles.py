@@ -1,23 +1,20 @@
+"""Additional style functions for PlainChart."""
 import statistics
 
+
 def mean_html(chart, value, y):
-	mean = statistics.mean(chart.values)
-	mean_y = chart.y(mean)
-	value_y = chart.y(value)
+    """Style a y value to produce a bar chart in an HTML document."""
+    mean = statistics.mean(chart.values)
+    mean_y = chart.y(mean)
+    value_y = chart.y(value)
 
-	if value_y <= mean_y:
+    if value_y <= mean_y and y <= value_y:
+        return '<span style="color:green">▌</span>'
 
-		if y <= value_y:
-			return '<span style="color:green">▌</span>'
+    elif y <= mean_y:
+        return '<span style="color:green">▌</span>'
 
-		return '<span style="color:white">▌</span>'
+    elif y <= value_y:
+        return '<span style="color:red">▌</span>'
 
-	else:
-
-		if y <= mean_y:
-			return '<span style="color:green">▌</span>'
-
-		elif y <= value_y:
-			return '<span style="color:red">▌</span>'
-
-		return '<span style="color:white">▌</span>'
+    return '<span style="color:white">▌</span>'
