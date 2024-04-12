@@ -1,4 +1,42 @@
-"""A text-based, zero-dependency, open-source charting utility."""
+"""A text-based, zero-dependency, open-source charting utility.
+
+The plainchart module contains PlainChart, a simple class which makes
+approximate plots of uni-dimensional data. The initialization function receives
+this data as the parameter "values". The "height" of a chart is what makes it
+approximate. All values are clamped (truncated) to the maximum height if they
+go beyond it, but otherwise values are scaled through rounding and
+multiplication to an approximation of their magnitude in the number of
+characters cells that will be displayed.
+
+The simplest example usage of the library is as follows:
+```python
+import plainchart
+
+
+print(plainchart.PlainChart([1,2,3]).render())
+```
+
+This example, when plotted, will show the three values in a bar plot like so:
+
+  ▌
+  ▌
+  ▌
+ ▌▌
+ ▌▌
+ ▌▌
+ ▌▌
+▌▌▌
+▌▌▌
+▌▌▌
+
+The values—one, two, and three—are scaled to approximately three characters in
+height because the default for that parameter is ten (height = 10). To make
+adjustments to the scaling, users should use a more appropriate height argument
+than the default to reduce visual bias. However, the library is incredibly
+simple, and shouldn't be relied upon for qualitative data analysis. It is only
+suitable as an amusement or for a quick view of a simple linear trend.
+
+"""
 
 
 class PlainChart(object):
