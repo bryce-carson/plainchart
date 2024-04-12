@@ -115,7 +115,7 @@ print(chart.render(new_line='<br>'))
 $ python mean_html.py > mean.html
 ```
 
-![Mean HTML chart](https://github.com/gduverger/bryce-carson/blob/master/static/mean.png "Mean HTML chart")
+![Mean HTML chart](static/mean.png "Mean HTML chart")
 
 Contribute
 ----------
